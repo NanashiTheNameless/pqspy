@@ -4,7 +4,7 @@ PQSpy-NamelessNanashi
 Firefox extension to quickly check if the webpage you're visiting
 was protected using post-quantum encryption.
 
-~~Install from [addons.mozilla.org](<null>).~~ (Not Ready Yet)
+~~Install from [addons.mozilla.org](<https://addons.mozilla.org/en-US/firefox/addon/pqspy-namelessnanashi/>).~~ (Not Ready Yet)
 
 ⚠️ Don't forget to enable PQC Kyber: go to `about:config`
    and set `security.tls.enable_kyber`
