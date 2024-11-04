@@ -9,7 +9,7 @@ Install A manual version from the [releases](<https://github.com/NanashiTheNamel
 
 --- OR ---
 
-~~Install from [addons.mozilla.org](<https://addons.mozilla.org/en-US/firefox/addon/pqspy-namelessnanashi/>).~~ (Not Ready Yet)
+Install from [addons.mozilla.org](<https://addons.mozilla.org/en-US/firefox/addon/pqspy-namelessnanashi/>).
 
 Reminder for usage
 ------------------------
