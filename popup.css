@@ -1,7 +1,6 @@
 body {
     font: 1rem/2 sans-serif;
     width: 500px;
-    background-color: #000;
     background: #000;
     color: #fff;
 }
@@ -11,7 +10,7 @@ body {
 }
 
 #cache {
-    color: #808080;
+    color: #cecece;
 }
 
 ul {
@@ -37,5 +36,5 @@ li .url:hover {
 }
 
 .url {
-    color: #003ecf;
+    color: #a5a5a5;
 }
