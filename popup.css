@@ -1,14 +1,17 @@
 body {
     font: 1rem/2 sans-serif;
     width: 500px;
+    background-color: #000;
+    background: #000;
+    color: #fff;
 }
 
 .hidden {
-   display: none;
+	display: none;
 }
 
 #cache {
-    color: gray;
+    color: #808080;
 }
 
 ul {
@@ -34,5 +37,5 @@ li .url:hover {
 }
 
 .url {
-    color: blue;
+    color: #003ecf;
 }

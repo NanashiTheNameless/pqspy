@@ -1,12 +1,10 @@
-PQSpy
+PQSpy-NamelessNanashi
 =====
 
 Firefox extension to quickly check if the webpage you're visiting
 was protected using post-quantum encryption.
 
-<img width="1036" alt="Screenshot 2024-08-21 at 14 23 55" src="https://github.com/user-attachments/assets/48e4050d-3bce-4140-a482-8510a41e7dcc">
-
-Install from [addons.mozilla.org](https://addons.mozilla.org/en-GB/firefox/addon/pqspy/).
+~~Install from [addons.mozilla.org](<null>).~~ (Not Ready Yet)
 
 ⚠️ Don't forget to enable PQC Kyber: go to `about:config`
    and set `security.tls.enable_kyber`
@@ -15,7 +13,7 @@ Install from [addons.mozilla.org](https://addons.mozilla.org/en-GB/firefox/addon
 Installation from source
 ------------------------
 
-1. Clone this repository: `git clone https://github.com/bwesterb/pqspy`.
+1. Clone this repository: `git clone https://github.com/NanashiTheNameless/pqspy`.
 2. In Firefox, go to `about:addons`
 3. Click the gear, and then _Debug Add-Ons_.
 4. Press *Load Temporary Add-on*.
