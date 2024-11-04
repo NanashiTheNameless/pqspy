@@ -52,8 +52,8 @@ async function logKex(details) {
     if (details.type === "beacon")
         return;
     const info = await browser.webRequest.getSecurityInfo(
-      details.requestId,
-      {},
+        details.requestId,
+        {},
     );
     if (details.type === "main_frame" || !kexes[tid])
         kexes[tid] = {
@@ -87,8 +87,8 @@ async function logKex(details) {
 }
 
 browser.webRequest.onHeadersReceived.addListener(logKex,
-  {urls: ["*://*/*"]},
-  ["blocking"]
+    {urls: ["*://*/*"]},
+    ["blocking"]
 );
 
 browser.tabs.onRemoved.addListener(function(tid, info) {
@@ -96,7 +96,7 @@ browser.tabs.onRemoved.addListener(function(tid, info) {
 });
 
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === "pqspy") {
-    sendResponse(kexes[message.tabId]);
-  }
+    if (message.action === "pqspy") {
+        sendResponse(kexes[message.tabId]);
+    }
 });
