@@ -17,18 +17,18 @@ function summarize(data) {
     }
 
     if (pq > 0 && npq == 0 && unk == 0) {
-        return ["yes", "⚛️  post-quantum encrypted"];
+        return ["yes", "🗹  post-quantum encrypted"];
     }
 
     if (pq == 0) {
-        return ["no", "❌ not post-quantum encrypted"];
+        return ["no", "🗷 not post-quantum encrypted"];
     }
 
     if (pq > 0 && npq > 0) {
-        return ["warn", "⚠️  partially post-quantum encrypted (" + pq + "/" + tot + ")"];
+        return ["warn", "⚠  partially post-quantum encrypted (" + pq + "/" + tot + ")"];
     }
 
-    return ["unk", "❓ unknown"];
+    return ["unk", "🯄 unknown"];
 }
 
 function classify(kex) {
