@@ -14,7 +14,7 @@ Install from [addons.mozilla.org](<https://addons.mozilla.org/en-US/firefox/addo
 Reminder for usage
 ------------------------
 
-###### Firefox 132+ now defaults to using [X25519MLKEM768](<https://datatracker.ietf.org/doc/draft-kwiatkowski-tls-ecdhe-mlkem/>) without needing settings changes!
+###### Firefox 132+ now defaults to using [X25519MLKEM768](<https://datatracker.ietf.org/doc/draft-kwiatkowski-tls-ecdhe-mlkem>) without needing settings changes! (On Beta and Nightly branches at least)
 
 ### If you are using Firefox 124 through Firefox 131
 
