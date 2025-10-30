@@ -1,7 +1,13 @@
-PQSpy-NamelessNanashi
+# PQSpy-NamelessNanashi
+
 =====
 
 ### Firefox extension to quickly check if the webpage you're visiting was protected using post-quantum encryption.
+
+Privacy
+------------------------
+
+See Privacy Policy: [PrivacyPolicy.md](<PrivacyPolicy.md>)
 
 ## If you want this version
 
