@@ -2,8 +2,6 @@
 
 ### Firefox extension to quickly check if the webpage you're visiting was protected using post-quantum encryption.
 
-<img width="966" height="850" alt="Screenshot 2026-07-28 at 15 20 08" src="https://github.com/user-attachments/assets/2316cd0a-33fa-4aa1-b89a-52eed751e59c" />
-
 Privacy
 ------------------------
 
@@ -22,12 +20,6 @@ Reminder for usage
 
 ###### Firefox 132+ now defaults to using [X25519MLKEM768](<https://datatracker.ietf.org/doc/draft-kwiatkowski-tls-ecdhe-mlkem>) without needing settings changes! (On Beta and Nightly branches at least)
 
-### If you are using Firefox 124 through Firefox 131
-
-⚠️ Don't forget to enable PQC Kyber: go to `about:config`
-   and set `security.tls.enable_kyber`
-   and `network.http.http3.enable_kyber` to `true`. ⚠️
-
 ###### You can use [Cloudflare's PostQuantum test-page](<https://pq.cloudflareresearch.com/>) to ensure you have PostQuantum enabled!
 
 Installation from source
@@ -37,4 +29,4 @@ Installation from source
 2. In Firefox, go to `about:addons`
 3. Click the gear, and then _Debug Add-Ons_.
 4. Press *Load Temporary Add-on*.
-5. Browse to `manifest.json`.
+5. Browse to `src/manifest.json`.

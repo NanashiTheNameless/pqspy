@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "PQSpy-NamelessNanashi",
   "description": "NamelessNanashi's version of PQSpy: Shows whether the connection was protected with post-quantum encryption",
-  "version": "0.3.0.1",
+  "version": "0.4.0.0",
   "homepage_url": "https://github.com/NanashiTheNameless/pqspy",
   "browser_action": {
     "default_icon": {
@@ -26,7 +26,7 @@
           "none"
         ]
       },
-      "strict_min_version": "112.0"
+      "strict_min_version": "79.0"
     }
   }
 }

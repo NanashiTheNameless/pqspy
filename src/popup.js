@@ -29,12 +29,29 @@ function fill(sel, entries) {
     }
 }
 
+// The verdict line carries the same image the toolbar button does, rather
+// than a glyph standing in for it.
+function showSummary(icon, text) {
+    const img = document.createElement("img");
+    img.className = "icon";
+    img.src = "icons/" + icon + ".png";
+    img.alt = "";
+    document.querySelector("#summary").replaceChildren(
+        img, document.createTextNode(" " + text));
+}
+
 function update(data, tabId) {
     // Undefined for tabs the background script hasn't seen requests for,
     // for instance after it was restarted.
-    data = data || { summary: "No resources", pq: [], nonpq: [], unknown: [] };
+    data = data || {
+        summary: "No resources",
+        icon: "unk",
+        pq: [],
+        nonpq: [],
+        unknown: [],
+    };
 
-    document.querySelector("#summary").innerText = data.summary;
+    showSummary(data.icon || "unk", data.summary);
 
     // Cached responses count towards the same totals, but get their own list
     // so that nothing shows up under two headings at once.

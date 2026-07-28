@@ -9,6 +9,14 @@ body {
     display: none;
 }
 
+/* Sized to the line rather than to the 32px source, and nudged onto the
+   baseline so it sits with the text instead of on top of it. */
+.icon {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.2em;
+}
+
 .cached {
     color: var(--cached);
 }
