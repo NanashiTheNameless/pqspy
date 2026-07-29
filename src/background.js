@@ -31,7 +31,11 @@ function summarize(data) {
         return ["yes", "post-quantum encrypted"];
     }
 
-    return ["warn", "partially post-quantum encrypted (" + pq + "/" + tot + ")"];
+    // A mixed page is the warning -- unless the page itself was one of the
+    // ones without, which is a cross however well its subresources did. The
+    // popup's #page line spells that case out.
+    return [data.main === "nonpq" ? "no" : "warn",
+            "partially post-quantum encrypted (" + pq + "/" + tot + ")"];
 }
 
 // Names come from getKeaGroupName() in nsNSSCallbacks.cpp; which of them
@@ -83,6 +87,10 @@ async function record(details) {
             // Which of icons/*.png the verdict corresponds to; the popup
             // shows the same image next to its summary line.
             icon: null,
+            // Which bucket the main frame itself fell into, so a page served
+            // without post-quantum encryption isn't excused by its
+            // subresources.
+            main: null,
             pq: [],
             nonpq: [],
             unknown: [],
@@ -108,6 +116,9 @@ async function record(details) {
     // it still counts towards the totals, and the popup splits the lists on
     // this flag so nothing gets listed twice.
     kexes[tid][tp].push([kex, details.type, details.url, details.fromCache]);
+
+    if (details.type === "main_frame")
+        kexes[tid].main = tp;
 
     const [icon, summary] = summarize(kexes[tid]);
     kexes[tid].summary = summary;
