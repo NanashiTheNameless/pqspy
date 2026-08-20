@@ -60,7 +60,7 @@ const PQSpyRestricted = (function () {
 
         if (domains.has(u.hostname))
             return {
-                summary: "\u26d4 not visible to extensions",
+                summary: "Not visible to extensions",
                 detail: "Firefox refuses every extension access to " +
                     u.hostname + " (its " +
                     "extensions.webextensions.restrictedDomains preference), " +
@@ -73,7 +73,7 @@ const PQSpyRestricted = (function () {
         if (u.protocol !== "http:" && u.protocol !== "https:"
             && url !== "about:blank")
             return {
-                summary: "\u26d4 nothing to report",
+                summary: "Nothing to report",
                 detail: "PQSpy only sees http and https pages, so there is " +
                     "nothing for it to report on this " + u.protocol +
                     " page.",
