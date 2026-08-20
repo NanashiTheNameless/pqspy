@@ -1,3 +1,4 @@
 web-ext-artifacts
 web-ext-artifacts/*
 node_modules/
+.amo-upload-uuid

@@ -8,7 +8,17 @@
   </head>
 
   <body>
+      <div id="tabs" role="tablist">
+      <button id="tab-encryption" class="tab active" role="tab"
+              aria-selected="true" aria-controls="panel-encryption">Encryption</button>
+      <button id="tab-jwts" class="tab" role="tab"
+              aria-selected="false" aria-controls="panel-jwts">JWTs</button>
+      </div>
+
+      <section id="panel-encryption" class="panel" role="tabpanel"
+               aria-labelledby="tab-encryption">
       <div id="summary"><img class="icon" src="icons/unk.png" alt=""> Waiting for data ...</div>
+      <div id="note" class="note hidden"></div>
       <div id="page" class="hidden"><img class="icon" src="icons/no.png" alt=""> the page itself is not post-quantum encrypted</div>
 
       <details id="not-pq" class="hidden">
@@ -41,6 +51,47 @@
       <ul></ul>
       </details>
 
+      <footer id="caveat">
+      This tool reports on post-quantum encryption to counter
+      <a href="https://en.wikipedia.org/wiki/Harvest_now,_decrypt_later"
+         target="_blank">harvest-now/decrypt-later</a>; it doesn't check
+      whether authentication (certificates) are quantum secure,
+      <a href="https://github.com/bwesterb/pqspy/issues/4"
+         target="_blank">yet</a>.
+      </footer>
+      </section>
+
+      <section id="panel-jwts" class="panel hidden" role="tabpanel"
+               aria-labelledby="tab-jwts">
+      <div id="jwt-bar">
+        <span id="jwt-summary">Waiting for data ...</span>
+      </div>
+      <div id="jwt-note" class="note hidden"></div>
+
+      <details id="jwt-pq" class="hidden">
+      <summary><span class="counter">?</span> <img class="icon" src="icons/yes.png" alt=""> post-quantum secure</summary>
+      <ul></ul>
+      </details>
+
+      <details id="jwt-not-pq" class="hidden">
+      <summary><span class="counter">?</span> <img class="icon" src="icons/no.png" alt=""> not post-quantum secure</summary>
+      <ul></ul>
+      </details>
+
+      <details id="jwt-unknown" class="hidden">
+      <summary><span class="counter">?</span> <img class="icon" src="icons/unk.png" alt=""> unknown</summary>
+      <ul></ul>
+      </details>
+
+      <footer id="jwt-caveat">
+      This tab reports the
+      <a href="https://en.wikipedia.org/wiki/JSON_Web_Token"
+         target="_blank">JSON Web Tokens</a> seen in this tab's request
+      headers, cookies, URL, and web storage.
+      </footer>
+      </section>
+
+      <script src="restricted.js"></script>
       <script src="popup.js"></script>
   </body>
 </html>
